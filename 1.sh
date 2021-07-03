@@ -1,0 +1,1 @@
+cd /etc/ && mv dnsmasq.conf dnsmasq.conf_alt && wget https://github.com/diggerwf/wlan-router/blob/main/dnsmasq.conf && dnsmasq --test -C /etc/dnsmasq.conf && systemctl enable dnsmasq && cd /etc/hostapd/ && wget https://github.com/diggerwf/wlan-router/blob/main/hostapd.conf && chmod 600 /etc/hostapd/hostapd.conf && hostapd -dd /etc/hostapd/hostapd.conf
